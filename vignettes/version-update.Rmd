@@ -6,6 +6,12 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
+## version 1.4
+### date: 2020-07-27
+1. add numeric.nms(), factor.nms(), character.nms(), and name.n() to get numeric names, factor names, character names and names with unique number values n.  
+2. add model.data() to extract data from model
+3. add dump.it() to make dump variable names
+
 
 ## version 1.3  
 #### date: 2020-06-30
