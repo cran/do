@@ -2,15 +2,25 @@
 % Please edit documentation in R/model.data.R
 \name{model.data}
 \alias{model.data}
+\alias{model.y}
+\alias{model.x}
 \title{Extract data of model}
 \usage{
 model.data(fit)
+
+model.y(fit)
+
+model.x(fit)
 }
 \arguments{
 \item{fit}{fitted results}
 }
 \value{
 dataframe in the model
+
+
+
+
 }
 \description{
 Extract data of model
@@ -18,4 +28,6 @@ Extract data of model
 \examples{
 fit <- lm(mpg~vs+am+poly(qsec,2),data=mtcars)
 head(model.data(fit))
+model.y(fit)
+model.x(fit)
 }

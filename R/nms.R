@@ -35,6 +35,9 @@ character.nms <- function(df){
     names(x)[x]
 }
 
+
+
+
 #' Names with different letters
 #'
 #' @param df datafame or matrix
@@ -43,16 +46,13 @@ character.nms <- function(df){
 #'
 #' @return names
 #' @export
-#'
-name.n <- function(df,least=NULL,most=NULL){
+names_n <- function(df,most=NULL,least=NULL){
     x=sapply(names(df), function(i) length(unique_no.NA(as.character(df[,i]))))
     if (!is.null(least) & is.null(most)){
         y=names(x)[x>=least]
-        class(y)='namen'
         y
     }else if (is.null(least) & !is.null(most)){
         y=names(x)[x<=most]
-        class(y)='namen'
         y
     }else if (is.null(least) & is.null(most)){
         stop('least and most can not both be NULL')
@@ -60,5 +60,4 @@ name.n <- function(df,least=NULL,most=NULL){
         stop('least and most can not both be given at the same time')
     }
 }
-
 

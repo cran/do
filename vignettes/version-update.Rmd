@@ -6,6 +6,12 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
+## version 1.5
+### date 2020-09-17
+1. add rep_n() and rep_character() to rep each inner elements in vectors  
+2. add Apriori.Basket() to create basket format data for apriori analysis  
+3. add as.data.frame() to transform rules to dataframe for apriori analysis  
+
 ## version 1.4
 ### date: 2020-07-27
 1. add numeric.nms(), factor.nms(), character.nms(), and name.n() to get numeric names, factor names, character names and names with unique number values n.  
