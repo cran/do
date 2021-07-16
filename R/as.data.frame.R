@@ -1,9 +1,10 @@
-#' Transform rules to dataframe
-#'
+#' Transform to dataframe
+#' rules object or calibrate object
 #' @param x data with rules class for package 'arules'
 #' @param row.names ignore
 #' @param optional ignore
 #' @param ... ignore
+#' @name as.data.frame
 #' @importFrom methods as
 #' @method as.data.frame rules
 #' @return a dataframe
@@ -19,5 +20,11 @@ as.data.frame.rules <- function(x, row.names = NULL, optional = FALSE, ...){
     }else{
         df
     }
-    
+}
+#' @rdname as.data.frame
+#' @method as.data.frame calibrate
+#' @export
+#'
+as.data.frame.calibrate <- function(x, row.names = NULL, optional = FALSE, ...){
+    utils::head(x,length(x[,1]))
 }
