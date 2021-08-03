@@ -5,6 +5,6 @@
 #' @return hypertext reference attributes
 #' @export
 #'
-attr_herf <- function(x){
-    rvest::html_attr(x,'herf')
+attr_href <- function(x){
+    rvest::html_attr(x,'href')
 }

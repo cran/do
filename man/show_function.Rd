@@ -19,8 +19,3 @@ command line in new script
 Show function command line in new script
 script will be store in your temporary directory
 }
-\examples{
-\donttest{
-show_function(base::abbreviate)
-}
-}

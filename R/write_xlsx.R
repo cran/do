@@ -14,14 +14,14 @@
 #' @examples
 #' \donttest{
 #' mtcars2 = mtcars
-#' write_xlsx(mtcars,mtcars2,file='mtcars')
+#' # write_xlsx(mtcars,mtcars2,file='mtcars')
 #' }
 write_xlsx <- function(...,file,sheet,col.names=TRUE,row.names=FALSE,overwrite=FALSE,append=FALSE){
     if (!right_equal(file,'.xlsx')) file <- fmt('/ .xlsx',file)
     msg <- ifelse(cnOS(),
                   tmcn::toUTF8(fmt("/ \u5DF2\u5B58\u5728",file)),
                   fmt('/ already exists.'))
-    if (file.exists(file) & all(!overwrite, !append)) stop()
+    if (file.exists(file) & all(!overwrite, !append)) stop(msg)
     if (missing(sheet)) sheet <- get_names(...)
     data <- list(...)
     if (append){

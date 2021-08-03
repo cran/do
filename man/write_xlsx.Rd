@@ -40,6 +40,6 @@ write or append one or more data into one Excel file in each sheet.
 \examples{
 \donttest{
 mtcars2 = mtcars
-write_xlsx(mtcars,mtcars2,file='mtcars')
+# write_xlsx(mtcars,mtcars2,file='mtcars')
 }
 }

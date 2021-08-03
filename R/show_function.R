@@ -6,10 +6,6 @@
 #' @return command line in new script
 #' @export
 #'
-#' @examples
-#' \donttest{
-#' show_function(base::abbreviate)
-#' }
 show_function <- function(f,file=NULL){
     args <- formals(f,envir = .GlobalEnv)
     argl <- lapply(args, function(i) deparse(i))
@@ -43,7 +39,7 @@ show_function <- function(f,file=NULL){
     if (is.null(file)) file <- fl
     if (tolower(do::right(file,2)) != '.r') file=paste0(file,'.R')
     writeLines(argb,file)
-    utils::file.edit(file)
+    usethis::edit_file(file)
 }
 
 

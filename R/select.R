@@ -35,7 +35,7 @@ select.character <- function(data,i,...){
     ck <- grepl('grepl\\(', cmd)
     if (ck){
         ck <- cmd |> 
-            Replace("grepl(","grepl(x=data,") |> 
+            Replace("grepl\\(","grepl(x=data,") |> 
             exec()
         data[ck]
     }else{
@@ -52,7 +52,7 @@ select.numeric <- function(data,i,...){
     ck <- grepl('grepl\\(', cmd)
     if (ck){
         ck <- cmd |> 
-            Replace("grepl(","grepl(x=data,") |> 
+            Replace("grepl\\(","grepl(x=data,") |> 
             exec()
         data[ck]
     }else{
@@ -74,7 +74,7 @@ select.data.frame <- function(data,i,j,drop=FALSE,...){
         ck <- grepl('grepl\\(', cmd)
         if (ck){
             ck <- cmd |> 
-                Replace("grepl(","grepl(x=rownames(data),") |> 
+                Replace("grepl\\(","grepl(x=rownames(data),") |> 
                 exec()
         }else{
             ck <- fmt('with(data,eval(/ ))',substitute(i)) |> 
@@ -87,7 +87,7 @@ select.data.frame <- function(data,i,j,drop=FALSE,...){
         ck <- grepl('grepl\\(', cmd)
         if (ck){
             ck <- cmd |> 
-                Replace("grepl(","grepl(x=colnames(data),") |> 
+                Replace("grepl\\(","grepl(x=colnames(data),") |> 
                 exec()
         }else{
             ck <- j
@@ -106,7 +106,7 @@ select.matrix <- function(data,i,j,drop=FALSE,...){
         ck <- grepl('grepl\\(', cmd)
         if (ck){
             ck <- cmd |> 
-                Replace("grepl(","grepl(x=rownames(data),") |> 
+                Replace("grepl\\(","grepl(x=rownames(data),") |> 
                 exec()
         }else{
             ck <- fmt('with(data,eval(/ ))',substitute(i)) |> 
@@ -119,7 +119,7 @@ select.matrix <- function(data,i,j,drop=FALSE,...){
         ck <- grepl('grepl\\(', cmd)
         if (ck){
             ck <- cmd |> 
-                Replace("grepl(","grepl(x=colnames(data),") |> 
+                Replace("grepl\\(","grepl(x=colnames(data),") |> 
                 exec()
         }else{
             ck <- j
@@ -137,7 +137,7 @@ select.list <- function(data,i,j,drop=FALSE,...){
         ck <- grepl('grepl\\(', cmd)
         if (ck){
             ck <- cmd |> 
-                Replace("grepl(","grepl(x=names(data),") |> 
+                Replace("grepl\\(","grepl(x=names(data),") |> 
                 exec()
             data <- data[ck]
         }else{

@@ -24,16 +24,14 @@
 Replace <- function(data,from,to,pattern,ignore.case=FALSE){
   
   if (all(!missing(from),!missing(to))){
-    
     for (i in 1:length(from)) {
-      fromi <- gsub('\\(','\\\\(',from[i])
+      fromi <- from[i]
       data=Replace1(data,fromi,to,ignore.case=ignore.case)
     }
   }
   if (!missing(pattern)){
     for (j in 1:length(pattern)) {
       from=gsub(":.*","",pattern[j],ignore.case=ignore.case)
-      from <- gsub('\\(','\\\\(',from)
       to=gsub(".*:","",pattern[j],ignore.case=ignore.case)
       data=Replace1(data,from,to,ignore.case=ignore.case)
     }

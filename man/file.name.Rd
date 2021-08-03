@@ -4,10 +4,12 @@
 \alias{file.name}
 \title{Extract file name}
 \usage{
-file.name(...)
+file.name(..., extension = TRUE)
 }
 \arguments{
 \item{...}{one or more file path}
+
+\item{extension}{whether include extension, default is TRUE}
 }
 \value{
 file names
