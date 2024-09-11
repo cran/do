@@ -1,5 +1,5 @@
-40caac701c89d4d79444b40c352cdbf0 *DESCRIPTION
-631afb768be59a6470341caf0e8bcbd8 *NAMESPACE
+8a3c23edb1530d342b5e0a98a7237125 *DESCRIPTION
+374dec7ed9599a66da9de72c9195e3aa *NAMESPACE
 3bbcab7eec8083a0c423a1ece147a4de *R/Apriori.Basket.R
 405108c3f215978ab92623398fc0435f *R/Grepl.R
 45ea8c486b1d4932a344471ac1f13e3d *R/NAcount.R
@@ -85,10 +85,11 @@ ee7996ae95d2c9849cf92cbfea11f0c4 *R/toVector.R
 c0fe82d4ea468f7e264e9eb68e9e89b9 *R/unique.no.NA.R
 034e6df046e1653ec9a3b039388b914e *R/upper.dir.R
 06eddf2f6acdac428c7924565a2ea917 *R/write_xlsx.R
+80d4b7bed75cadfca91f3a22b0974a23 *R/zzz.R
 9b0e830fff713628fcb666b63a4f1eef *README.md
-fe6f0d42a1a753c439da502de76f8484 *build/vignette.rds
+c032655a344c7a5e387c8bd28adde920 *build/vignette.rds
 9f7c8b98de76c470c7cf5896e1c37371 *inst/doc/version-update.Rmd
-b8232f353da7b53236e74cb491506093 *inst/doc/version-update.html
+03f0b0b35c67880ecaddd234e42ee35b *inst/doc/version-update.html
 04e9693b2bfb948f9ac3a4faae36ddaa *inst/rstudio/addins.dcf
 76504ad75416cbbdb1bffd60e0da41f7 *man/Apriori.Basket.Rd
 472d0ebade1c068865cb9cb0ba666420 *man/Grepl.Rd
